@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb mt-3 mb-3">
             <div class="text-left">
-                <h2>Jenis-jenis Laptop Tahun 2020</h2>
+                <h2>sizes</h2>
             </div>
             <div class="text-right">
-                <a class="btn btn-success" href="{{ route('laptops.create') }}">Tambah Buku</a>
+                <a class="btn btn-success" href="{{ route('laptops.create') }}">Tambah sizes</a>
             </div>
         </div>
     </div>
@@ -24,28 +24,22 @@
     <table class="table table-striped table-bordered">
         <tr>
             <th>No</th>
-            <th>Nama Laptop</th>
+            <th>Nama sizes</th>
             <th>Jenis Laptop</th>
-            <th>Harga Laptop</th>
-            <th>Cpu Laptop</th>
-            <th>Vga Laptop</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($laptop as $key => $item)
+        @foreach ($sizes as $key => $item)
         <tr>
           
             <td>{{ $key+1 }}</td>
-            <td>{{ $item->nama_laptop }}</td>
+            <td>{{ $item->nama_sizes }}</td>
             <td>{{ $item->jenis_laptop }}</td>
-            <td>{{ $item->harga_laptop }}</td>
-            <td>{{ $item->cpu_laptop }}</td>
-            <td>{{ $item->vga_laptop }}</td>
             <td>
-                 <form action="{{ route('laptops.destroy',$item->id) }}" method="POST">
+                 <form action="{{ route('sizes.destroy',$item->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('laptops.show',$item->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('sizes.show',$item->id) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('laptops.edit',$item->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('sizes.edit',$item->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')

@@ -7,7 +7,7 @@
                 <h2>materials</h2>
             </div>
             <div class="text-right">
-                <a class="btn btn-success" href="{{ route('materials.create') }}">Tambah Buku</a>
+                <a class="btn btn-success" href="{{ route('materials.create') }}">Tambah materials</a>
             </div>
         </div>
     </div>
